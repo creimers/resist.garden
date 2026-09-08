@@ -13,6 +13,8 @@
   --glass: rgba(20, 32, 22, 0.55);
   --petal: rgba(235, 245, 236, 0.38);
   --core: rgba(245, 250, 245, 0.55);
+  --label-bg: rgba(245, 250, 245, 0.72);
+  --label-ink: #5b4a8a;
   color-scheme: dark;
 }
 
@@ -105,16 +107,26 @@ body {
   position: relative;
   height: 1.6em;
   width: 12ch;
+  padding: 0.35em 1.4em;
+  box-sizing: content-box;
+  border-radius: 999px;
+  background: var(--label-bg);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 0 28px rgba(235, 245, 236, 0.25);
   text-align: center;
-  font-size: 1.15rem;
+  font-size: 1.35rem;
   letter-spacing: 0.1em;
-  color: var(--ink-soft);
+  color: var(--label-ink);
   font-style: italic;
 }
 
 .breath__label span {
   position: absolute;
   inset: 0;
+  display: grid;
+  place-items: center;
+  line-height: 1;
   animation-duration: var(--breath);
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
